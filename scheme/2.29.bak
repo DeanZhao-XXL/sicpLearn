@@ -1,0 +1,21 @@
+#lang sicp
+;2.29
+(define (left-branch mobile)
+  (car mobile))
+(define (right-branch mobile)
+  (cdr mobile))
+(define (branch-length branch)
+  (car branch))
+(define (branch-weight branch)
+  (cdr branch))
+
+;活动体的总重量
+;两个分支的重量
+;两个分支的weight递归,直到weight不是pair
+(define (total-weight m)
+  (deifine (weight b count)
+           (cond ((not(pair? (branch-weight b)))
+               (+ count branch-weight)
+               
+               
+           

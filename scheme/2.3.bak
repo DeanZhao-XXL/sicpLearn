@@ -1,0 +1,6 @@
+#lang sicp
+(define (scale-list n items )
+  ( if (null? items)
+       nil
+       (cons (* n (car items))
+             (scale-list n (cdr items)))))

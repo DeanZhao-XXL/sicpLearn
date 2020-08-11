@@ -1,0 +1,11 @@
+#lang sicp
+;2.28 把树转成表
+;遍历树,找到叶子,把叶子list起来
+(define (fringe tree)
+  (cond ((null?) nil)
+        ((ispair? (car tree))
+         (cons (car tree )
+               (fringe (cdr tree))))
+        (else
+         (cons (fringe (car tree))
+               (fringe (cdr tree))))))
